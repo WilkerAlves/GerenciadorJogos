@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGame.Domain", "XGame.Domain\XGame.Domain.csproj", "{EAC1EFDC-5818-4278-BF37-8217AEF0264A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGame.Infra", "XGame.Infra\XGame.Infra.csproj", "{CBF9ED8B-607B-452D-BB45-EE92322A5468}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EAC1EFDC-5818-4278-BF37-8217AEF0264A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC1EFDC-5818-4278-BF37-8217AEF0264A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAC1EFDC-5818-4278-BF37-8217AEF0264A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF9ED8B-607B-452D-BB45-EE92322A5468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF9ED8B-607B-452D-BB45-EE92322A5468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF9ED8B-607B-452D-BB45-EE92322A5468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF9ED8B-607B-452D-BB45-EE92322A5468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

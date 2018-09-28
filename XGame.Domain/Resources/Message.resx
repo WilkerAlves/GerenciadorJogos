@@ -120,6 +120,9 @@
   <data name="OPERACAO_REALIZADA_COM_SUCESSO" xml:space="preserve">
     <value>Operação realizada com sucesso</value>
   </data>
+  <data name="X0_DADOS_NAO_ENCONTRADOS" xml:space="preserve">
+    <value>{0} Informação não encontrada</value>
+  </data>
   <data name="X0_E_OBRIGATORIA_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERE" xml:space="preserve">
     <value>{0} Obrigatória e deve conter {1} e {2} caracteres</value>
   </data>

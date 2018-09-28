@@ -70,6 +70,15 @@ namespace XGame.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Informação não encontrada.
+        /// </summary>
+        public static string X0_DADOS_NAO_ENCONTRADOS {
+            get {
+                return ResourceManager.GetString("X0_DADOS_NAO_ENCONTRADOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} Obrigatória e deve conter {1} e {2} caracteres.
         /// </summary>
         public static string X0_E_OBRIGATORIA_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERE {

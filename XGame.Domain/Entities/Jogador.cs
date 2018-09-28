@@ -10,6 +10,12 @@ namespace XGame.Domain.Entities
 {
     public class Jogador : Notifiable
     {
+        public Guid Id { get; private set; }
+        public Nome Nome { get; private set; }
+        public Email Email { get; private set; }
+        public string Senha { get; private set; }
+        public EnumSituacaoJogador Status { get; private set; }
+
         public Jogador(Email email, string senha)
         {
             Senha = senha;
@@ -20,7 +26,7 @@ namespace XGame.Domain.Entities
             }
 
             new AddNotifications<Jogador>(this)
-                .IfNullOrInvalidLength(j => j.Senha,6,32,"A senha deve possuir entre 6 e 32 caracteres");
+                .IfNullOrInvalidLength(j => j.Senha, 6, 32, "A senha deve possuir entre 6 e 32 caracteres");
         }
 
         public Jogador(Nome nome, Email email, string senha)
@@ -33,7 +39,7 @@ namespace XGame.Domain.Entities
 
             new AddNotifications<Jogador>(this)
                 .IfNullOrInvalidLength(j => j.Senha, 6, 32,
-                Message.X0_E_OBRIGATORIA_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERE.ToFormat("Senha","6","32"));
+                Message.X0_E_OBRIGATORIA_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERE.ToFormat("Senha", "6", "32"));
 
             if (IsValid())
             {
@@ -43,15 +49,17 @@ namespace XGame.Domain.Entities
             AddNotifications(nome, email);
         }
 
-        public Guid Id { get; private set; }
-        public Nome Nome { get; private set; }
-        public Email Email { get; private set; }
-        public string Senha { get; private set; }
-        public EnumSituacaoJogador Status { get; private set; }
-
         public override string ToString()
         {
             return $"{Nome.PrimeiroNome} {Nome.UltimoNome}";
+        }
+
+        public void AlterarJogador(Nome nome, Email email)
+        {
+            Nome = nome;
+            Email = email;
+
+            AddNotifications(nome, email);
         }
     }
 }
